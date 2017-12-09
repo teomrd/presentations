@@ -1,0 +1,10 @@
+{
+  "generator-presto-preso": {
+    "promptValues": {
+      "githubname": "teomrd",
+      "license": "MIT",
+      "twittername": "",
+      "ama": false
+    }
+  }
+}

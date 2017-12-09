@@ -1,0 +1,10 @@
+{
+
+  "index": {
+    "layout": "index",
+    "title": "presentations",
+    "description": "A simple project to create and manage presentations powered by web based technologies",
+    "keywords": "static, reveal.js"
+  }
+
+}
