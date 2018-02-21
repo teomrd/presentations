@@ -7,11 +7,15 @@
     "clean": "rimraf docs",
     "build": "npm run clean && grunt",
     "ensure-components-dir": "mkdirp public/components",
-    "postinstall": "npm run ensure-components-dir && ncp node_modules/reveal.js public/components/reveal.js/.",
-    "dev": "concurrently --kill-others \"npm start\" \"browser-sync start -p http://localhost:5001/ --files views\"",
+    "postinstall":
+      "npm run ensure-components-dir && ncp node_modules/reveal.js public/components/reveal.js/.",
+    "dev":
+      "concurrently --kill-others \"npm start\" \"browser-sync start -p http://localhost:5001/ --files views\"",
     "static-preview": "http-server --silent ./docs/",
     "ensure-docs": "path-exists docs && echo \"docs/ exists\" || grunt",
-    "test": "npm run ensure-docs && concurrently --kill-others \"npm run static-preview\" \"mocha --exit\""
+    "test":
+      "npm run ensure-docs && concurrently --kill-others \"npm run static-preview\" \"mocha --exit\"",
+    "deploy": "git push heroku master && heroku open"
   },
   "dependencies": {
     "body-parser": "1.18.2",
@@ -50,7 +54,8 @@
     "node": ">=4.5",
     "npm": ">=3"
   },
-  "description": "A simple project to create and manage presentations powered by web based technologies",
+  "description":
+    "A simple project to create and manage presentations powered by web based technologies",
   "main": "app.js",
   "directories": {
     "doc": "docs",
